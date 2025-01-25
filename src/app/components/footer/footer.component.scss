@@ -1,0 +1,73 @@
+.form-control:focus {
+  box-shadow: 5px 5px var(--main-color);
+  border-color: var(--main-color);
+}
+
+::placeholder {
+  color: var(--main-color);
+}
+
+.nav-menu i {
+  transition: color 0.5s;
+}
+.nav-menu i:hover {
+  color: var(--main-color);
+}
+
+@media (max-width: 500px) {
+  .nav-menu {
+    gap: 15px !important;
+  }
+  footer .container h2 {
+    width: 100%;
+  }
+  footer .container p {
+    font-size: 10px;
+  }
+  footer .container #input {
+    flex-wrap: wrap;
+  }
+  footer .container #input button {
+    width: 100%;
+  }
+  footer .container .pay-details {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .container .pay-details .amazon-pay {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .container .pay-details .amazon-pay h3 {
+    width: 100%;
+    text-align: center;
+  }
+  footer .container .pay-details .apple {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  footer .container .pay-details .apple h3 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 775px) {
+  footer .container h2 {
+    width: 100%;
+  }
+  footer .container #input {
+    flex-wrap: wrap;
+  }
+  footer .container #input button {
+    width: 100%;
+  }
+  footer .container .pay-details {
+    display: flex;
+    flex-direction: column;
+  }
+}

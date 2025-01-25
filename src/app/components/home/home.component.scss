@@ -1,0 +1,32 @@
+.star-container {
+  position: relative;
+  display: inline-block;
+}
+
+.star-container i {
+  font-size: 20px;
+  color: #ccc;
+}
+
+.star-container .filled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: gold;
+}
+
+.form-control:focus {
+  box-shadow: 5px 5px var(--main-color);
+  border-color: var(--main-color);
+}
+
+::placeholder {
+  color: var(--main-color);
+}
+
+@media (max-width: 768px) {
+  #search-input {
+    width: 100% !important;
+  }
+}

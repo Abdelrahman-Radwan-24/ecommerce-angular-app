@@ -1,0 +1,21 @@
+@media (max-width: 500px) {
+  h1 {
+    font-size: 20px;
+  }
+  .cart {
+    width: 100% !important;
+  }
+  .total-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .total-price h3 {
+    width: 50%;
+    font-size: 15px;
+  }
+  .total-price button {
+    width: 50%;
+  }
+}

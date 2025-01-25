@@ -1,0 +1,18 @@
+@media (max-width: 500px) {
+  .wishlist {
+    width: 100% !important;
+  }
+  .details {
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+  }
+
+  .details .Remove {
+    width: 100%;
+  }
+  .details button {
+    margin-top: 5px;
+    width: 100% !important;
+  }
+}

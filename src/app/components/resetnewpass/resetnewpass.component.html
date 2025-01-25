@@ -1,0 +1,106 @@
+<section class="bg-main-light shadow p-5 mt-5 rounded-4">
+  <div class="row align-items-center justify-content-center">
+    <div class="col-md-6">
+      <img
+        src="./assets/images/resetnewpass.webp"
+        class="w-100 rounded-4"
+        alt="resetnewpass-logo"
+      />
+    </div>
+    <div class="col-md-6">
+      <h1 class="text-main fw-bold">
+        {{ "resetNewPass.reset your account password" | translate }}
+      </h1>
+      <form [formGroup]="resetPassword" (ngSubmit)="resetPasswordsub()">
+        <div class="my-2">
+          <label for="email">
+            {{ "resetNewPass.Enter Email" | translate }} :</label
+          >
+          <input
+            readonly
+            [ngClass]="{
+              'is-valid':
+                !resetPassword.get('email')?.errors &&
+                (resetPassword.get('email')?.touched ||
+                  resetPassword.get('email')?.dirty),
+              'is-invalid':
+                resetPassword.get('email')?.errors &&
+                (resetPassword.get('email')?.touched ||
+                  resetPassword.get('email')?.dirty)
+            }"
+            formControlName="email"
+            id="email"
+            class="form-control"
+            type="email"
+            placeholder="Email"
+            dir="auto"
+          />
+          @if (resetPassword.get('email')?.errors &&
+          (resetPassword.get('email')?.touched ||
+          resetPassword.get('email')?.dirty) ) {
+          <div class="alert alert-danger">
+            @if (resetPassword.get('email')?.getError('required') ) {
+
+            <p class="m-0">{{ "resetNewPass.Email Required" | translate }}</p>
+            } @else if (resetPassword.get('email')?.getError('email')) {
+            <p class="m-0">
+              {{ "resetNewPass.Enter Valid Email" | translate }}
+            </p>
+
+            }
+          </div>
+          }
+        </div>
+
+        <div class="my-2 position-relative">
+          <label for="password">
+            {{ "resetNewPass.Enter NewPassword" | translate }} :</label
+          >
+          <input
+            #inputPassword
+            [ngClass]="{
+              'is-valid':
+                !resetPassword.get('newPassword')?.errors &&
+                (resetPassword.get('newPassword')?.touched ||
+                  resetPassword.get('newPassword')?.dirty),
+              'is-invalid':
+                resetPassword.get('newPassword')?.errors &&
+                (resetPassword.get('newPassword')?.touched ||
+                  resetPassword.get('newPassword')?.dirty)
+            }"
+            formControlName="newPassword"
+            id="password"
+            class="form-control"
+            type="password"
+            placeholder="*****"
+            dir="auto"
+          />
+          <span (click)="showPassword()" class="eyeIcon"
+            ><i #eyeIcon class="fa-regular fa-eye-slash"></i
+          ></span>
+          @if (resetPassword.get('newPassword')?.errors &&
+          (resetPassword.get('newPassword')?.touched ||
+          resetPassword.get('newPassword')?.dirty) ) {
+          <div class="alert alert-danger">
+            @if (resetPassword.get('newPassword')?.getError('required') ) {
+            <p class="m-0">
+              {{ "resetNewPass.Password Required" | translate }}
+            </p>
+            } @else if (resetPassword.get('newPassword')?.getError('pattern')) {
+            <p class="m-0">
+              {{ "resetNewPass.Must Be At Least 6 Chars" | translate }}
+            </p>
+            }
+          </div>
+          }
+        </div>
+        <button
+          [disabled]="resetPassword.invalid"
+          class="btn-main d-block ms-auto my-2 rounded-4"
+        >
+          {{ "resetNewPass.Verify Reset Password" | translate }}
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,157 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top shadow">
+  <div class="container-fluid justify-content-between" id="test">
+    <div class="wishlist d-flex align-items-center gap-2">
+      <li class="user nav-item dropdown list-unstyled">
+        <a
+          class="nav-link dropdown-toggle uer-info"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <span class="fs-4 fw-bold">{{
+            dataUser?.name?.slice(0, 1)?.toUpperCase()
+          }}</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a
+              class="dropdown-item hover text-main fw-bold"
+              (click)="onDropdownClick($event)"
+            >
+              {{ dataUser?.name }}
+            </a>
+          </li>
+          <li><hr class="dropdown-divider" /></li>
+          <li>
+            <a
+              class="dropdown-item text-truncate text-black fw-bold"
+              (click)="onDropdownClick($event)"
+              style="max-width: 200px"
+            >
+              {{ dataUser?.email }}
+            </a>
+          </li>
+          <li><hr class="dropdown-divider" /></li>
+          <li (click)="_AuthService.logOut()">
+            <a class="dropdown-item logOut c-p">
+              {{ "navbar.SignOut" | translate }}
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="lang nav-item dropdown list-unstyled">
+        <a
+          class="nav-link dropdown-toggle uer-info"
+          role="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          <span class="fs-6 fw-bold"> {{ "navbar.lang" | translate }}</span>
+        </a>
+        <ul class="dropdown-menu">
+          <li
+            [class.bg-info]="_TranslateService.currentLang == 'en'"
+            (click)="change('en')"
+          >
+            <a class="dropdown-item c-p"> {{ "navbar.EN" | translate }} </a>
+          </li>
+          <li
+            [class.bg-info]="_TranslateService.currentLang == 'ar'"
+            (click)="change('ar')"
+          >
+            <a class="dropdown-item c-p"> {{ "navbar.AR" | translate }} </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="cart nav-item list-unstyled">
+        <a class="nav-link position-relative" routerLink="wishlist">
+          <i class="fa-solid fa-heart fa-2xl text-main"></i>
+          <span class="icon badge bg-danger">
+            {{ wishlistCount() }}
+          </span>
+        </a>
+      </li>
+
+      <li class="cart nav-item list-unstyled">
+        <a class="nav-link position-relative" routerLink="cart">
+          <i class="fa-solid fa-cart-shopping fa-2xl text-main"></i>
+          <span class="icon badge bg-danger">
+            {{ countNumber() }}
+          </span>
+        </a>
+      </li>
+    </div>
+
+    <div class="logo d-flex align-items-center gap-2" id="navbarLogo">
+      <a class="navbar-brand" routerLink="home">
+        <img
+          src="./assets/images/freshcart-logo.svg"
+          width="180px"
+          alt="fresh-cart-logo"
+        />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarLinks"
+        aria-controls="navbarLinks"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span
+          ><i
+            class="fa-solid fa-bars fa-1x"
+            style="color: var(--main-color)"
+          ></i
+        ></span>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse flex-grow-0" id="navbarLinks">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            class="nav-link home"
+            routerLinkActive="active-link"
+            routerLink="home"
+          >
+            {{ "navbar.Home" | translate }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link home"
+            routerLinkActive="active-link"
+            routerLink="products"
+          >
+            {{ "navbar.Products" | translate }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link home"
+            routerLinkActive="active-link"
+            routerLink="categories"
+          >
+            {{ "navbar.Categories" | translate }}
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link home"
+            routerLinkActive="active-link"
+            routerLink="brands"
+          >
+            {{ "navbar.Brands" | translate }}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="progress-container">
+    <div class="progress-bar" [style.width.%]="progress"></div>
+  </div>
+</nav>

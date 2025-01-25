@@ -1,0 +1,72 @@
+<section class=" cart w-75 mx-auto mt-5">
+  <h1>{{ "cart.Shopping Cart" | translate }} :</h1>
+  @if (getCart.totalCartPrice > 0) {
+
+  <div class=" total-price d-flex align-items-center justify-content-between">
+    <h3 class="text-main h5">
+      {{ "cart.Total Cart Price" | translate }} :
+      {{ getCart.totalCartPrice | currency : "GBP" }}
+    </h3>
+    <button
+      [disabled]="isCartEmpty"
+      (click)="confirmClearCart()"
+      class="btn btn-outline-danger"
+    >
+      {{ "cart.Clear All" | translate }}
+    </button>
+  </div>
+
+  @for (cart of getCart.products; track cart.product.id) {
+  <div class="row my-3 py-3 bg-main-light rounded-4 shadow">
+    <div class="col-md-1">
+      <img
+        [src]="cart.product.imageCover"
+        class="w-100"
+        [alt]="cart.product.title"
+      />
+    </div>
+    <div
+      class="col-md-11 mt-3 mt-lg-0 d-flex align-items-center justify-content-between"
+    >
+      <div>
+        <h3 class="h4">{{ cart.product.title | termtext : 2 }}</h3>
+        <h4 class="text-main h5">
+          {{ "cart.Price" | translate }} : {{ cart.price | currency : "GBP" }}
+        </h4>
+        <span (click)="deleteItem(cart.product.id)" class="c-p">
+          <i class="fa-regular fa-trash-can text-main"></i>
+          {{ "cart.Remove" | translate }}
+        </span>
+      </div>
+      <div class="d-flex align-items-center justify-content-center gap-2">
+        <span
+          (click)="updateCart(cart.product.id, cart.count + 1)"
+          class="text-main c-p"
+          ><i class="fa-solid fa-circle-plus fa-lg"></i
+        ></span>
+        <span> {{ cart.count }} </span>
+        <span
+          (click)="updateCart(cart.product.id, cart.count - 1)"
+          class="text-main c-p"
+          ><i class="fa-solid fa-circle-minus fa-lg"></i
+        ></span>
+      </div>
+    </div>
+  </div>
+  }
+
+  <button
+    [routerLink]="['/checkout', getCart._id]"
+    class="btn-main my-2 w-100 rounded-4"
+  >
+    {{ "cart.Checkout" | translate }}
+  </button>
+  }@else {
+  <div class="text-center text-main d-flex flex-column gap-5 my-4 py-5">
+    <h1 class="fw-bold">{{ "cart.your Cart Is Empty" | translate }}</h1>
+    <button routerLink="/home" class="btn-main w-100 rounded-4">
+      {{ "cart.Go to Shopping" | translate }}
+    </button>
+  </div>
+  }
+</section>

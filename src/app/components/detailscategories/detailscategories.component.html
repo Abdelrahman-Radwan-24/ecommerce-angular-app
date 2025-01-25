@@ -1,0 +1,21 @@
+@if (detailsCategory) {
+<section class="mt-5">
+  <h1>{{ "DetailsCategory.Details Category" | translate }} :</h1>
+  <div class="row align-items-center flex-column">
+    <div class="col-md-6">
+      <div>
+        <img
+          [src]="detailsCategory.image"
+          class="w-100"
+          [alt]="detailsCategory.name"
+        />
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div>
+        <h1 class="text-main text-center">{{ detailsCategory.name }}</h1>
+      </div>
+    </div>
+  </div>
+</section>
+}

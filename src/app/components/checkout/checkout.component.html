@@ -1,0 +1,145 @@
+<section class="bg-main-light shadow p-5 mt-5 rounded-4">
+  <h5 routerLink="/cart" class="text-main c-p">
+    {{ "checkOut.Back" | translate }}
+  </h5>
+
+  <div class="row align-items-center justify-content-center">
+    <div class="col-md-6">
+      <img
+        src="./assets/images/payment.png"
+        class="w-100 rounded-4"
+        alt="payment-logo"
+      />
+    </div>
+    <div class="col-md-6">
+      <h1 class="text-center">{{ "checkOut.Checkout" | translate }}</h1>
+      <form [formGroup]="checkOutForms" (ngSubmit)="cashPayment()">
+        <div class="my-2">
+          <label for="phone"> {{ "checkOut.phone" | translate }} :</label>
+          <input
+            [ngClass]="{
+            'is-valid' :  !checkOutForms.get('phone')?.errors && (checkOutForms.get('phone')?.touched || checkOutForms.get('phone')?.dirty)  ,
+            'is-invalid' : checkOutForms.get('phone')?.errors && (checkOutForms.get('phone')?.touched || checkOutForms.get('phone')?.dirty)  ,
+          }"
+            formControlName="phone"
+            id="phone"
+            type="tel"
+            class="form-control"
+            placeholder="Phone Number..."
+            dir="auto"
+          />
+          @if (checkOutForms.get('phone')?.errors &&
+          (checkOutForms.get('phone')?.touched ||
+          checkOutForms.get('phone')?.dirty) ) {
+          <div class="alert alert-danger">
+            @if (checkOutForms.get('phone')?.getError('required') ) {
+
+            <p class="m-0">{{ "checkOut.Phone Is Required" | translate }}</p>
+            }@else if (checkOutForms.get('phone')?.getError('pattern')) {
+
+            <p class="m-0">{{ "checkOut.Enter Valid Phone" | translate }}</p>
+            }
+          </div>
+          }
+        </div>
+        <div class="my-2">
+          <label for="city"> {{ "checkOut.city" | translate }} :</label>
+          <input
+            [ngClass]="{
+            'is-valid' :  !checkOutForms.get('city')?.errors && (checkOutForms.get('city')?.touched || checkOutForms.get('city')?.dirty)  ,
+            'is-invalid' : checkOutForms.get('city')?.errors && (checkOutForms.get('city')?.touched || checkOutForms.get('city')?.dirty)  ,
+          }"
+            formControlName="city"
+            id="city"
+            type="text"
+            class="form-control"
+            placeholder="Write Your City..."
+            dir="auto"
+          />
+          @if (checkOutForms.get('city')?.errors &&
+          (checkOutForms.get('city')?.touched ||
+          checkOutForms.get('city')?.dirty) ) {
+          <div class="alert alert-danger">
+            @if (checkOutForms.get('city')?.getError('required') ) {
+
+            <p class="m-0">{{ "checkOut.City Is Required" | translate }}</p>
+            }@else if (checkOutForms.get('city')?.getError('minlength') ) {
+
+            <p class="m-0">
+              {{ "checkOut.must be at least 4 characters" | translate }}
+            </p>
+            }@else if (checkOutForms.get('city')?.getError('maxlength')) {
+
+            <p class="m-0">
+              {{ "checkOut.must be at least 20 characters" | translate }}
+            </p>
+            }@else if (checkOutForms.get('city')?.getError('pattern')) {
+            <p class="m-0">{{ "checkOut.Enter Valid City" | translate }}</p>
+            }
+          </div>
+          }
+        </div>
+        <div class="my-2">
+          <label for="details"> {{ "checkOut.Details" | translate }} :</label>
+          <textarea
+            rows="3"
+            [ngClass]="{
+            'is-valid' :  !checkOutForms.get('details')?.errors && (checkOutForms.get('details')?.touched || checkOutForms.get('details')?.dirty)  ,
+            'is-invalid' : checkOutForms.get('details')?.errors && (checkOutForms.get('details')?.touched || checkOutForms.get('details')?.dirty)  ,
+          }"
+            formControlName="details"
+            id="details"
+            class="form-control"
+            placeholder="Write Your Address Here..."
+            dir="auto"
+          ></textarea>
+          @if (checkOutForms.get('details')?.errors &&
+          (checkOutForms.get('details')?.touched ||
+          checkOutForms.get('details')?.dirty) ) {
+          <div class="alert alert-danger">
+            @if (checkOutForms.get('details')?.getError('required') ) {
+            <p class="m-0">{{ "checkOut.Details Is Required" | translate }}</p>
+            }@else if (checkOutForms.get('details')?.getError('minlength')) {
+            <p class="m-0">
+              {{ "checkOut.Adders Must be at least 10 characters" | translate }}
+            </p>
+            }
+          </div>
+          }
+        </div>
+        <div class="form-check my-4">
+          <input
+            formControlName="paymentMethod"
+            id="cashPyment"
+            value="cashPayment"
+            type="radio"
+            class="form-check-input"
+          />
+          <label class="form-check-label" for="cashPyment">
+            {{ "checkOut.Cash Payment" | translate }}
+          </label>
+        </div>
+        <div class="form-check my-4">
+          <input
+            formControlName="paymentMethod"
+            id="onlinePyment"
+            value="onlinePayment"
+            type="radio"
+            class="form-check-input"
+          />
+          <label class="form-check-label" for="onlinePyment">
+            {{ "checkOut.Online Payment" | translate }}
+          </label>
+        </div>
+        <button
+          [disabled]="checkOutForms.invalid"
+          type="submit"
+          class="btn-main my-2 w-100 rounded-4"
+        >
+          {{ "checkOut.Continue With" | translate }}
+          {{ checkOutForms.get("paymentMethod")?.value }}
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,184 @@
+.navbar-toggler:focus {
+  box-shadow: unset;
+}
+
+.navbar-toggler {
+  border-color: var(--main-color);
+}
+
+span .fa-solid {
+  color: var(--main-color);
+}
+
+.btn-nav {
+  background-color: var(--main-color);
+  padding: 5px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav-menu i {
+  transition: color 0.5s;
+}
+.nav-menu i:hover {
+  color: var(--main-color);
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.uer-info {
+  background-color: var(--main-color);
+  color: var(--light-color);
+  margin-inline: 5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uer-info.show {
+  color: var(--light-color);
+}
+
+.dropdown-item.hover:hover {
+  background-color: #f8f9fa;
+  color: var(--main-color);
+}
+
+.dropdown-item:active {
+  background-color: #f8f9fa;
+}
+
+.dropdown-item:focus-visible {
+  outline: unset;
+}
+
+.dropdown-item.logOut {
+  transition: color 0.5s;
+}
+.dropdown-item.logOut:hover {
+  color: var(--main-color);
+}
+
+.progress-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: #f3f3f3;
+  z-index: 10;
+  border-radius: 5px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--main-color);
+  transition: width 0.2s ease;
+  border-radius: 5px;
+}
+
+@media (max-width: 300px) {
+  .logo a img {
+    width: 120px !important;
+  }
+  .navbar-toggler {
+    border: none !important;
+  }
+  button span i {
+    font-size: 20px !important;
+  }
+  .auth {
+    gap: 10px !important;
+  }
+  .auth li a span {
+    font-size: 10px !important;
+  }
+  .auth > a {
+    width: fit-content;
+    padding: 5px;
+    font-size: 5px;
+  }
+  .uer-info {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 384px) {
+  .logo a img {
+    width: 80px !important;
+  }
+  .navbar-toggler {
+    border: none !important;
+  }
+  button span i {
+    font-size: 20px !important;
+  }
+  .auth {
+    gap: 5px !important;
+  }
+  .auth li a span {
+    font-size: 10px !important;
+  }
+  .auth > a {
+    width: fit-content;
+    padding: 8px;
+    font-size: 8px;
+  }
+  .uer-info {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: 384px) and (max-width: 520px) {
+  .logo a img {
+    width: 130px !important;
+  }
+  .navbar-toggler {
+    border: none !important;
+  }
+  button span i {
+    font-size: 25px !important;
+  }
+  .auth {
+    gap: 10px !important;
+  }
+  .auth li a span {
+    font-size: 10px !important;
+  }
+  .auth > a {
+    width: fit-content;
+    padding: 7px;
+    font-size: 10px;
+  }
+  .uer-info {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+}
+
+@media (max-width: 766px) {
+  .nav-menu {
+    padding-block: 15px;
+    margin-block: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 766px) {
+  button {
+    display: none;
+  }
+}

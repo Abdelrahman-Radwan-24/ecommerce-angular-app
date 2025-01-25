@@ -1,0 +1,25 @@
+.order {
+  position: relative;
+}
+
+.order::after {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 1px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--main-color);
+}
+
+@media (max-width: 770px) {
+  .row {
+    display: flex;
+    flex-direction: column-reverse !important;
+  }
+
+  .details {
+    display: flex;
+    justify-content: flex-start !important;
+  }
+}

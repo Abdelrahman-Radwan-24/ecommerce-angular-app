@@ -1,0 +1,87 @@
+<section class="mt-5">
+  <h1 class="fw-bold text-main">{{ "Orders.My Orders" | translate }}</h1>
+  <div>
+    @for (order of allOrders ; track order._id ) {
+    <div
+      class="row bg-main-light shadow rounded-4 p-4 my-5 d-flex flex-row-reverse"
+    >
+      <div class="details col-md-8 d-flex justify-content-end">
+        <div>
+          <h3 class="order fw-bold mb-3">
+            {{ "Orders.order details" | translate }} :
+          </h3>
+          <strong>
+            <p>
+              {{ "Orders.Is Delivered" | translate }}:
+              <span
+                class="text-white p-1 rounded"
+                [class]="order.isDelivered == true ? 'bg-success' : 'bg-danger'"
+                >{{ order.isDelivered }}</span
+              >
+            </p></strong
+          >
+          <strong>
+            <p>
+              {{ "Orders.Order ID" | translate }} :
+              <span class="text-main">{{ order.id }}</span>
+            </p></strong
+          >
+          <strong>
+            <p>
+              {{ "Orders.Payment Method" | translate }} :
+              <span class="text-main"> {{ order.paymentMethodType }}</span>
+            </p>
+          </strong>
+          <strong
+            ><p>
+              {{ "Orders.Address" | translate }} :
+              <span class="text-main">{{ order.shippingAddress.city }}</span>
+            </p></strong
+          >
+          <strong
+            ><p>
+              {{ "Orders.Phone Number" | translate }} :
+              <span class="text-main">{{ order.shippingAddress.phone }}</span>
+            </p></strong
+          >
+          <strong
+            ><p>
+              {{ "Orders.Total Order Price" | translate }} :
+              <span class="text-main">{{ order.totalOrderPrice }}</span>
+            </p></strong
+          >
+          <strong>
+            <p>
+              {{ "Orders.Is Paid" | translate }} :
+              <span
+                class="text-white p-1 rounded"
+                [class]="order.isPaid == true ? 'bg-success' : 'bg-danger'"
+                >{{ order.isPaid }}</span
+              >
+            </p></strong
+          >
+        </div>
+      </div>
+      <div class="col-md-4">
+        @for (item of order.cartItems; track $index) {
+        <div class="d-flex gap-3 align-items-center">
+          <img
+            class="my-2 img-fluid rounded-4"
+            [src]="item.product.imageCover"
+            width="100px"
+            [alt]="item.product.title"
+          />
+          <div>
+            <h6>{{ item.product.title | termtext : 2 }}</h6>
+            <h6 class="fw-bold text-main">
+              {{ item.price | currency : "GBP" }}
+            </h6>
+            <p>{{ "Orders.Qty" | translate }} : {{ item.count }}</p>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+    }
+  </div>
+</section>

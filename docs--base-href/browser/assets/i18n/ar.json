@@ -1,0 +1,145 @@
+{
+  "navbar": {
+    "Home": "الصفحة الرئيسية",
+    "Products": "المنتجات",
+    "Categories": "الفئات",
+    "Brands": "العلامات التجارية",
+    "SignOut": "تسجيل الخروج",
+    "lang": "اللغة",
+    "EN": "الإنجليزية",
+    "AR": "العربية"
+  },
+  "owlCategories": {
+    "Featured Categories": "الفئات المميزة"
+  },
+  "owlProducts": {
+    "Popular Products": "المنتجات الشائعة",
+    "Add To Cart": "أضف إلى عربة التسوق",
+    "All Products": "جميع المنتجات"
+  },
+  "cart": {
+    "Total Cart Price": "إجمالي سعر السلة",
+    "Shopping Cart": "عربة التسوق",
+    "Clear All": "إزالة الكل",
+    "Checkout": "إتمام الشراء",
+    "Remove": "حذف",
+    "your Cart Is Empty": "سلة التسوق الخاصة بك فارغة",
+    "Go to Shopping": "اذهب إلى التسوق",
+    "Price": "السعر"
+  },
+  "wish": {
+    "Wishlist": "قائمة المفضلات",
+    "Remove": "حذف",
+    "Add to Cart": "أضف إلى عربة التسوق",
+    "your Wishlist Is Empty": "قائمة الرغبات الخاصة بك فارغة",
+    "Go to Shopping": "اذهب إلى التسوق"
+  },
+  "footer": {
+    "Get The FreshCart App": "احصل على تطبيق فريش كارت",
+    "We Will Send You a Link, Open it on Your Phone to download the app": "سنرسل لك رابطًا، افتحه على هاتفك لتنزيل التطبيق.",
+    "Share App Link": "مشاركة رابط التطبيق",
+    "Payment partners": "شركاء الدفع",
+    "Get Deliveries with FreshCart": "احصل على التوصيل مع فريش كارت"
+  },
+  "DetailsCategory": {
+    "Details Category": "تفاصيل الفئة",
+    "All Categories": "جميع الفئات",
+    "Close": "إغلاق"
+  },
+  "DetailsProduct": {
+    "Details Product": "تفاصيل المنتج",
+    "Add To Cart": "أضف إلى السلة"
+  },
+  "brands": {
+    "All Brands": "جميع العلامات التجارية",
+    "Close": "إغلاق"
+  },
+  "checkOut": {
+    "Back": "رجوع",
+    "Checkout": "الدفع",
+    "phone": "هاتف",
+    "Phone Is Required": "الهاتف مطلوب",
+    "Enter Valid Phone": "أدخل هاتفًا صالحًا",
+    "city": "المدينة",
+    "City Is Required": "المدينة مطلوبة",
+    "must be at least 4 characters": "يجب أن يكون على الأقل 4 أحرف",
+    "must be at least 20 characters": "يجب أن يكون على الأقل 20 حرفًا",
+    "Enter Valid City": "أدخل مدينة صالحة",
+    "Details": "تفاصيل",
+    "Details Is Required": "التفاصيل مطلوبة",
+    "Adders Must be at least 10 characters": "يجب أن يكون العنوان على الأقل 10 أحرف",
+    "Cash Payment": "الدفع نقدًا",
+    "Online Payment": "الدفع الإلكتروني",
+    "Continue With": "متابعة باستخدام"
+  },
+  "Orders": {
+    "My Orders": "طلباتي",
+    "order details": "تفاصيل الطلب",
+    "Is Delivered": "تم التسليم",
+    "Order ID": "رقم الطلب",
+    "Payment Method": "طريقة الدفع",
+    "Address": "العنوان",
+    "Phone Number": "رقم الهاتف",
+    "Total Order Price": "السعر الإجمالي للطلب",
+    "Is Paid": "مدفوع",
+    "Qty": "الكمية"
+  },
+  "auth": {
+    "Sign In": "تسجيل الدخول",
+    "Sign Up": "إنشاء حساب"
+  },
+  "login": {
+    "Sign in to FreshCart": "تسجيل الدخول إلى فريش كارت",
+    "Welcome back to FreshCart! Enter your email to get started.": "مرحبًا بعودتك إلى فريش كارت! أدخل بريدك الإلكتروني للبدء.",
+    "email": "البريد الإلكتروني",
+    "Email Is Required": "البريد الإلكتروني مطلوب",
+    "Enter Valid Email": "أدخل بريدًا إلكترونيًا صالحًا",
+    "password": "كلمة المرور",
+    "Password Is Required": "كلمة المرور مطلوبة",
+    "Enter Valid Password": "أدخل كلمة مرور صالحة",
+    "Forgot Your Password ?": "هل نسيت كلمة المرور؟"
+  },
+  "register": {
+    "Get Start Shopping": "ابدأ التسوق",
+    "Welcome to FreshCart! Enter your email to get started.": "مرحبًا بك في فريش كارت! أدخل بريدك الإلكتروني للبدء.",
+    "name": "الاسم",
+    "Name Is Required": "الاسم مطلوب",
+    "Name Should be more than or equal 3 chars": "يجب أن يكون الاسم أكثر من أو يساوي 3 أحرف",
+    "Name Should be less than or equal 20 chars": "يجب أن يكون الاسم أقل من أو يساوي 20 حرفًا",
+    "email": "البريد الإلكتروني",
+    "Email Is Required": "البريد الإلكتروني مطلوب",
+    "Enter Valid Email": "أدخل بريدًا إلكترونيًا صالحًا",
+    "password": "كلمة المرور",
+    "Password Is Required": "كلمة المرور مطلوبة",
+    "Enter Valid Password": "أدخل كلمة مرور صالحة",
+    "rePassword": "تأكيد كلمة المرور",
+    "Password confirmation is incorrect": "تأكيد كلمة المرور غير صحيح",
+    "phone": "رقم الهاتف",
+    "Phone Is Required": "رقم الهاتف مطلوب",
+    "Enter Valid Phone": "أدخل رقم هاتف صالح"
+  },
+  "forgotPassword": {
+    "please enter your Email": "يرجى إدخال بريدك الإلكتروني",
+    "Email": "البريد الإلكتروني",
+    "Email Required": "البريد الإلكتروني مطلوب",
+    "Enter Valid Email": "أدخل بريدًا إلكترونيًا صالحًا",
+    "Verify Email": "تحقق من البريد الإلكتروني"
+  },
+  "resetCode": {
+    "Enter Your Reset Code": "أدخل رمز إعادة التعيين الخاص بك",
+    "Enter Code": "أدخل الرمز",
+    "Code is Required": "الرمز مطلوب",
+    "Enter Valid Code": "أدخل رمزًا صالحًا",
+    "Verify Reset Code": "تحقق من رمز إعادة التعيين"
+  },
+  "resetNewPass": {
+    "reset your account password": "إعادة تعيين كلمة مرور حسابك",
+    "Enter Email": "أدخل البريد الإلكتروني",
+    "Email Required": "البريد الإلكتروني مطلوب",
+    "Enter Valid Email": "أدخل بريدًا إلكترونيًا صالحًا",
+    "Enter NewPassword": "أدخل كلمة مرور جديدة",
+    "Password Required": "كلمة المرور مطلوبة",
+    "Must Be At Least 6 Chars": "يجب أن تكون على الأقل 6 أحرف",
+    "Verify Reset Password": "تحقق من إعادة تعيين كلمة المرور"
+  }
+}

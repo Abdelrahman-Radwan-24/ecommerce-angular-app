@@ -1,0 +1,145 @@
+{
+  "navbar": {
+    "Home": "Home",
+    "Products": "Products",
+    "Categories": "Categories",
+    "Brands": "Brands",
+    "SignOut": "SignOut",
+    "lang": "Lang",
+    "EN": "EN",
+    "AR": "AR"
+  },
+  "owlCategories": {
+    "Featured Categories": "Featured Categories"
+  },
+  "owlProducts": {
+    "Popular Products": "Popular Products",
+    "Add To Cart": "Add To Cart",
+    "All Products": "All Products"
+  },
+  "cart": {
+    "Total Cart Price": "Total Cart Price",
+    "Shopping Cart": "Shopping Cart",
+    "Clear All": "Clear All",
+    "Checkout": "Checkout",
+    "Remove": "Remove",
+    "your Cart Is Empty": "your Cart Is Empty",
+    "Go to Shopping": "Go to Shopping",
+    "Price": " Price"
+  },
+  "wish": {
+    "Wishlist": "Wishlist",
+    "Remove": "Remove",
+    "Add to Cart": "Add to Cart",
+    "your Wishlist Is Empty": "your Wishlist Is Empty",
+    "Go to Shopping": "Go to Shopping"
+  },
+  "footer": {
+    "Get The FreshCart App": "Get The FreshCart App",
+    "We Will Send You a Link, Open it on Your Phone to download the app": "We Will Send You a Link, Open it on Your Phone to download the app",
+    "Share App Link": "Share App Link",
+    "Payment partners": "Payment partners",
+    "Get Deliveries with FreshCart": "Get Deliveries with FreshCart"
+  },
+  "DetailsCategory": {
+    "Details Category": "Details Category",
+    "All Categories": "All Categories",
+    "Close": "Close"
+  },
+  "DetailsProduct": {
+    "Details Product": "Details Product",
+    "Add To Cart": "Add To Cart"
+  },
+  "brands": {
+    "All Brands": "All Brands",
+    "Close": "Close"
+  },
+  "checkOut": {
+    "Back": "Back",
+    "Checkout": "Checkout",
+    "phone": "phone",
+    "Phone Is Required": "Phone Is Required",
+    "Enter Valid Phone": "Enter Valid Phone",
+    "city": "city",
+    "City Is Required": "City Is Required",
+    "must be at least 4 characters": "must be at least 4 characters",
+    "must be at least 20 characters": "must be at least 20 characters",
+    "Enter Valid City": "Enter Valid City",
+    "Details": "Details",
+    "Details Is Required": "Details Is Required ",
+    "Adders Must be at least 10 characters": "Adders Must be at least 10 characters ",
+    "Cash Payment": "Cash Payment",
+    "Online Payment": "Online Payment ",
+    "Continue With": "Continue With"
+  },
+  "Orders": {
+    "My Orders": "My Orders",
+    "order details": "order details",
+    "Is Delivered": "Is Delivered",
+    "Order ID": "Order ID",
+    "Payment Method": "Payment Method",
+    "Address": "Address",
+    "Phone Number": "Phone Number",
+    "Total Order Price": "Total Order Price",
+    "Is Paid": "Is Paid",
+    "Qty": "Qty"
+  },
+  "auth": {
+    "Sign In": "Sign In",
+    "Sign Up": "Sign Up"
+  },
+  "login": {
+    "Sign in to FreshCart": "Sign in to FreshCart",
+    "Welcome back to FreshCart! Enter your email to get started.": "Welcome back to FreshCart! Enter your email to get started.",
+    "email": "email",
+    "Email Is Required": "Email Is Required",
+    "Enter Valid Email": "Enter Valid Email",
+    "password": "password",
+    "Password Is Required": "Password Is Required",
+    "Enter Valid Password": "Enter Valid Password",
+    "Forgot Your Password ?": "Forgot Your Password ?"
+  },
+  "register": {
+    "Get Start Shopping": "Get Start Shopping",
+    "Welcome to FreshCart! Enter your email to get started.": "Welcome to FreshCart! Enter your email to get started.",
+    "name": "name",
+    "Name Is Required": "Name Is Required",
+    "Name Should be more than or equal 3 chars": "Name Should be more than or equal 3 chars",
+    "Name Should be less than or equal 20 chars": "Name Should be less than or equal 20 chars",
+    "email": "email",
+    "Email Is Required": "Email Is Required",
+    "Enter Valid Email": "Enter Valid Email",
+    "password": "password",
+    "Password Is Required": "Password Is Required",
+    "Enter Valid Password": "Enter Valid Password",
+    "rePassword": "rePassword",
+    "Password confirmation is incorrect": "Password confirmation is incorrect",
+    "phone": "phone",
+    "Phone Is Required": "Phone Is Required",
+    "Enter Valid Phone": "Enter Valid Phone"
+  },
+  "forgotPassword": {
+    "please enter your Email": "please enter your Email",
+    "Email": "Email",
+    "Email Required": "Email Required",
+    "Enter Valid Email": "Enter Valid Email",
+    "Verify Email": "Verify Email"
+  },
+  "resetCode": {
+    "Enter Your Reset Code": "Enter Your Reset Code",
+    "Enter Code": "Enter Code",
+    "Code is Required": "Code is Required",
+    "Enter Valid Code": "Enter Valid Code",
+    "Verify Reset Code": "Verify Reset Code"
+  },
+  "resetNewPass": {
+    "reset your account password": "reset your account password",
+    "Enter Email": "Enter Email",
+    "Email Required": "Email Required",
+    "Enter Valid Email": "Enter Valid Email",
+    "Enter NewPassword": "Enter NewPassword",
+    "Password Required": "Password Required",
+    "Must Be At Least 6 Chars": "Must Be At Least 6 Chars",
+    "Verify Reset Password": "Verify Reset Password"
+  }
+}

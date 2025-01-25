@@ -1,0 +1,79 @@
+<app-banners></app-banners>
+
+<app-popularcategories></app-popularcategories>
+
+<section class="mt-5">
+  <h2>{{ "owlProducts.Popular Products" | translate }} :</h2>
+
+  <input
+    id="search-input"
+    [(ngModel)]="search"
+    type="search"
+    class="form-control w-50 mx-auto my-3"
+    placeholder="Search By Name..."
+    dir="auto"
+  />
+
+  <div class="row g-3">
+    @for(product of productsList.slice(0,20) | search : search ; track
+    product.id ){
+    <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3">
+      <div class="product p-3 c-p">
+        <div [routerLink]="['/details', product.id]">
+          <img
+            [src]="product.imageCover"
+            class="w-100"
+            [alt]="product.category.name"
+          />
+          <hr />
+          <h3 class="h5 text-main fw-bold">{{ product.category.name }}</h3>
+          <h4 class="h6 fw-bold">
+            {{ product.title | termtext : 3 }}
+          </h4>
+          <div class="d-flex justify-content-between align-items-center">
+            <span> {{ product.price | currency : "GBP" }}</span>
+
+            <div class="d-flex align-items-center">
+              @for (star of [1, 2, 3, 4, 5]; track $index) {
+              <div class="star-container">
+                <i class="fa fa-star"></i>
+
+                <i
+                  class="fa fa-star filled"
+                  [ngStyle]="{
+                    width: getStarWidth(star, product.ratingsAverage)
+                  }"
+                ></i>
+              </div>
+              }
+              <span class="ms-1">{{ product.ratingsAverage }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-between align-items-center gap-2">
+          <button
+            (click)="addCart(product.id)"
+            class="btn-main w-100 my-1 rounded-4"
+          >
+            {{ "owlProducts.Add To Cart" | translate }}
+          </button>
+          <span>
+            @if(product.wished){
+            <i
+              (click)="removeWishlist(product.id)"
+              class="fa-solid fa-heart text-danger fa-2xl"
+            ></i>
+            } @else {
+            <i
+              (click)="addWishlist(product.id)"
+              class="fa-regular fa-heart text-danger fa-2xl"
+            ></i>
+            }
+          </span>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</section>
